@@ -1,0 +1,75 @@
+// Main.
+.hero{
+    background: url('../img/hero.png') no-repeat center top;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 82vw;
+    min-height: 100vh;
+    position: relative;
+    color: $white;
+    
+    *{
+        z-index: 2;
+    }
+    &__overlay{
+        background: rgba(1,1,1, .05) url('../img/hero_gradient.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    &__title-tag{
+        &::after{
+            display: none;
+        }
+    }
+
+    &__scroll-down{
+        position: relative;
+        top: 6.94rem;
+    }
+}
+
+.culture{
+    &__container{
+        .content__image{
+            order: 1;
+        }
+    }
+}
+
+.splide__arrows{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+}
+
+.splide__arrow{
+    background: none;
+    position: static;
+}
+
+.splide__arrow:disabled{
+    opacity: .1;
+}
+
+.splide__arrow svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.splide__track{
+    height: 100%;
+}

@@ -1,0 +1,424 @@
+@media screen and (max-width: 900px){
+    html,
+    body{
+        font-size: 12px;
+    }
+
+    main > section {
+        margin-bottom: 8rem;
+    }
+    
+    h2{
+        font-size: 2rem;
+    }
+
+    .hero__overlay{
+        background-color: rgba(1,1,1, .1);
+    }
+    
+    .fullscreen-content__image{
+        height: 80vh;
+    }
+    
+    // Burger Menu
+    .header{
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: rgba(1,1,1, .9);
+        padding: 5% 0 10% 0;
+        position: fixed;
+        top: 0;
+        left: 100vw;
+        transition: all .8s;
+        
+        &__menu .menu__list{
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            
+            .menu__item:not(:last-child){
+                margin: 10px 0;
+            }
+
+            .menu__item{
+                font-size: 1.5rem;
+                margin: 10px 0;
+            }
+        }
+
+        &__search{
+            position: absolute;
+            bottom: 5%;
+            transition: all .3s;
+            
+            .search__icon{
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                right: 5px;
+
+                button{
+                    display: block;
+                }
+            }
+            input{
+                width: 100%;
+                font-size: 1.5rem;
+                border: $white 1px solid;
+                border-radius: 8px;
+                padding: 5px 10px;
+                padding-right: 40px;
+            }
+        }
+
+        &__logo{
+            font-size: 2rem;
+        }
+    }
+    
+    //....
+    // Components {
+        .container{
+            padding: 0 5%;
+        }
+        
+        .title-tag{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            
+            &::after{
+                display: inline-block;
+                width: 5rem;
+            }
+            &::before{
+                display: inline-block;
+                width: 5rem;
+            }
+        }
+
+        .read-more{
+            justify-content: center;
+            &::after{
+                display: none;
+            }
+        }
+
+        .scroll-down{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            
+            &__icon{
+                margin: 10px 0;
+            }
+        }
+
+        .content{
+            flex-direction: column;
+            text-align: center;
+
+            h2{
+                padding: 0;
+            }
+
+            &__image{
+                width: 60%;
+                height: 400px;
+                margin-bottom: 30px;
+                
+                img{
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+
+                @media screen and (max-width: 550px) {
+                    width: 80%;
+                }
+            }
+
+            &__description{
+                width: 80%;
+            }
+        }
+
+        .fullscreen-content{
+            &__image{
+                height: 90vh;
+                img{
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+            }
+            &__container{
+                padding: 0 0 2.27rem 0;
+            }
+
+            &__arrows{
+                opacity: .8;
+            }
+        }
+    //}
+    // Page Blocks.
+    .hero{
+        text-align: center;
+    }
+    .culture__container{
+        .content__image{
+            order: 0;
+
+            img{
+                object-position: center;
+            }
+        }
+    }
+
+    // Footer.
+    .footer__logo{
+        margin-bottom: 20px;
+    }
+
+    .footer-body {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        h3{
+            text-align: center;
+        }
+
+        .footer-navigation{
+            margin-top: 30px;
+            padding: 0;
+            
+            &__column{
+                text-align: center;
+            }
+        }
+    }
+    .footer-body{
+        .footer-navigation__column:not(:first-child){
+            margin: 0;
+        }
+        .footer-navigation{
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+
+    .footer__end{
+        margin: 4rem 0;
+    }
+    //...
+    h1{
+        font-size: 4.3rem;
+        span{
+            font-size: 3.8rem;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+
+}
+
+@media screen and (max-width: 426px){
+    .content{
+        &__image{
+            width: 100%;
+            height: 300px;
+        }
+
+        &__description{
+            width: 100%;
+        }
+    }  
+
+    .accept-block {        
+        &__btn{
+            padding: 1rem 2rem;
+        }
+    }
+
+    // Footer
+    .terms-and-privacy{
+        flex-direction: column;
+        align-items: center;
+
+        &__links{
+            width: 100%;
+            margin-bottom: 30px;
+            justify-content: space-around;
+            a{
+                margin: 0;
+            }
+        }
+    }
+    //...
+}
+
+
+@media screen and (min-width: 900px){
+    html,
+    body{
+        font-size: 13px;
+    }
+
+    main > section:not(:first-child) {
+        margin-bottom: 10rem;
+    }
+    //Components {
+        .container{
+            padding: 0 11rem;
+            width: 100%;
+        }
+        
+        .title-tag{
+            font-size: .8rem;
+        }
+
+        .content{
+            &__title-tag{
+                &::before{
+                    width: 2.5rem;
+                }
+                &::after{
+                    width: 2.5rem;
+                }
+            }
+
+            &__image {
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .fullscreen-content{
+            &__image{
+                height: 100vh;
+                img{
+                    object-fit: cover;
+                }
+            }
+            
+            &__container{
+                padding: 0 4rem 2.27rem 4rem;
+            }
+        }
+    //}
+    
+    .content__description{
+        h2{
+            padding: 0;
+        }
+    }
+    h2{
+        font-size: 3.3rem;
+    }
+
+    // Page Screens
+    .information {
+        margin-top: -20vh;
+        position: relative;
+        z-index: 2;
+    }
+
+    .footer-body .footer-navigation{
+        padding-right: 1rem;
+        
+        &__column:not(:first-child){
+            margin-left: 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    html,
+    body{
+        font-size: 15px;
+    }
+
+    h2{
+        font-size: 3.1rem;
+    }
+
+    // Components {
+        .container{
+            padding: 0 12.7rem;
+            width: 100%;
+        }
+
+        .content{
+            h2{
+                padding-right: 5.5rem;
+            }
+            
+            &__title-tag{
+                &::before{
+                    width: 4rem;
+                }
+                &::after{
+                    width: 4rem;
+                }
+            }
+
+            &__image {
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .fullscreen-content{
+            &__image{
+                height: auto;
+            }
+
+            &__container{
+                padding: 0 10.5rem 2.27rem 10.5rem;
+            }
+        }
+        
+    //}
+}
+
+@media screen and (min-width: 1480px){
+    html,
+    body{
+        font-size: 16px;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    .fullscreen-content{
+        &__container{
+            padding: 0 14.5rem 2.27rem 14.5rem;
+        }
+    }
+    .footer-navigation{
+        &__column:not(:first-child){
+            margin-left: 10.2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px){
+    html,
+    body{
+        font-size: 18px;
+    }
+    .content__description{
+        h2{
+            padding-right: 5.5rem;
+        }
+    }
+}

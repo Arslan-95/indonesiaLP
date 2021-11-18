@@ -1,0 +1,125 @@
+// Header.
+.search__icon{
+    background: url('../img/icons/search.svg') no-repeat;
+    background-size: contain;
+    width: 0.768rem;
+    height: 0.768rem;
+    display: flex;
+
+    button{
+        display: none;
+        border: none;
+        background: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem 4.72rem;
+    z-index: 10;
+    color: $golden;
+}
+.menu {
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item:not(:last-child){
+        margin-right: 2.7rem;
+    }
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+.search {
+    display: flex;
+    align-items: center;
+
+    &__icon{
+        margin-right: 5px;
+        opacity: .7;
+    }
+
+    input{
+        width: 3.5rem;
+        background: none;
+        border: none;
+        color: $white;
+        font-family: 'Open Sans';
+        outline: none;
+        
+        &::placeholder{
+            color: inherit;
+        }
+    }
+}
+
+.logo{
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.close-parent{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    cursor: pointer;
+    transition: all .5s;
+    outline: none;
+
+    &:active{
+        transform: rotate(-360deg);
+        transition: none;
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
+
+.show-header{
+    background-color: rgba(2,2,2, 0);
+    width: 100vw;
+    z-index: 9;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    transition: all .5s;
+
+    img{
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+    .logo{
+        color: $golden;
+    }
+}
+
+.mobile-first{
+    @media screen and (min-width: 900px){
+        display: none;
+    }
+}
